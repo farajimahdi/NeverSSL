@@ -1,0 +1,245 @@
+################# Enable Mod Rewrite
+<IfModule mod_rewrite.c>
+   RewriteEngine On
+   Options +FollowSymlinks
+   RewriteBase /
+
+################# Block access to htaccess
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+################## Prevent directory listings
+Options All -Indexes
+
+################## pass the default character set
+AddDefaultCharset UTF-8
+
+################### access only with http
+RewriteCond %{HTTPS} on
+RewriteRule (.*) http://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+################## open site without www 
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+################### prevent site from being cached
+<IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</IfModule>
+<FilesMatch "\.(css|flv|gif|htm|html|ico|jpe|jpeg|jpg|js|mp3|mp4|png|pdf|swf|txt)$">
+    <IfModule mod_expires.c>
+        ExpiresActive Off
+    </IfModule>
+    <IfModule mod_headers.c>
+        FileETag None
+        Header unset ETag
+        Header unset Pragma
+        Header unset Cache-Control
+        Header unset Last-Modified
+        Header set Pragma "no-cache"
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+        Header set Expires "Thu, 1 Jan 1970 00:00:00 GMT"
+    </IfModule>
+</FilesMatch>
+
+###################  Begin other Redirects
+Redirect 301 /https https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D9%88%D8%AA%DA%A9%D9%84_%D8%A7%D9%85%D9%86_%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84_%D8%A7%D8%A8%D8%B1%D9%85%D8%AA%D9%86
+Redirect 301 /ssl https://fa.wikipedia.org/wiki/%D8%A7%D9%85%D9%86%DB%8C%D8%AA_%D9%84%D8%A7%DB%8C%D9%87_%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84
+Redirect 301 /tls https://fa.wikipedia.org/wiki/%D8%A7%D9%85%D9%86%DB%8C%D8%AA_%D9%84%D8%A7%DB%8C%D9%87_%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84
+Redirect 301 /hsts https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security
+Redirect 301 /http2 https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D9%88%D8%AA%DA%A9%D9%84_%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84_%D8%A7%D8%A8%D8%B1%D9%85%D8%AA%D9%86_%D9%86%DA%AF%D8%A7%D8%B1%D8%B4_%DB%B2
+Redirect 301 /http https://fa.wikipedia.org/wiki/%D9%BE%D8%B1%D9%88%D8%AA%DA%A9%D9%84_%D8%A7%D9%86%D8%AA%D9%82%D8%A7%D9%84_%D8%A7%D8%A8%D8%B1%D9%85%D8%AA%D9%86
+
+################### Main Redirects
+Redirect 301 /123day /online
+Redirect 301 /132day /online
+Redirect 301 /213day /online
+Redirect 301 /231day /online
+Redirect 301 /312day /online
+Redirect 301 /321day /online
+Redirect 301 /123dawn /online
+Redirect 301 /132dawn /online
+Redirect 301 /213dawn /online
+Redirect 301 /231dawn /online
+Redirect 301 /312dawn /online
+Redirect 301 /321dawn /online
+Redirect 301 /123peace /online
+Redirect 301 /132peace /online
+Redirect 301 /213peace /online
+Redirect 301 /231peace /online
+Redirect 301 /312peace /online
+Redirect 301 /321peace /online
+Redirect 301 /123smile /online
+Redirect 301 /132smile /online
+Redirect 301 /213smile /online
+Redirect 301 /231smile /online
+Redirect 301 /312smile /online
+Redirect 301 /321smile /online
+Redirect 301 /123love /online
+Redirect 301 /132love /online
+Redirect 301 /213love /online
+Redirect 301 /231love /online
+Redirect 301 /312love /online
+Redirect 301 /321love /online
+Redirect 301 /123zen /online
+Redirect 301 /132zen /online
+Redirect 301 /213zen /online
+Redirect 301 /231zen /online
+Redirect 301 /312zen /online
+Redirect 301 /321zen /online
+Redirect 301 /123laugh /online
+Redirect 301 /132laugh /online
+Redirect 301 /213laugh /online
+Redirect 301 /231laugh /online
+Redirect 301 /312laugh /online
+Redirect 301 /321laugh /online
+Redirect 301 /123yawn /online
+Redirect 301 /132yawn /online
+Redirect 301 /213yawn /online
+Redirect 301 /231yawn /online
+Redirect 301 /312yawn /online
+Redirect 301 /321yawn /online
+Redirect 301 /123poem /online
+Redirect 301 /132poem /online
+Redirect 301 /213poem /online
+Redirect 301 /231poem /online
+Redirect 301 /312poem /online
+Redirect 301 /321poem /online
+Redirect 301 /123song /online
+Redirect 301 /132song /online
+Redirect 301 /213song /online
+Redirect 301 /231song /online
+Redirect 301 /312song /online
+Redirect 301 /321song /online
+Redirect 301 /123joke /online
+Redirect 301 /132joke /online
+Redirect 301 /213joke /online
+Redirect 301 /231joke /online
+Redirect 301 /312joke /online
+Redirect 301 /321joke /online
+Redirect 301 /123verse /online
+Redirect 301 /132verse /online
+Redirect 301 /213verse /online
+Redirect 301 /231verse /online
+Redirect 301 /312verse /online
+Redirect 301 /321verse /online
+Redirect 301 /123sunrise /online
+Redirect 301 /132sunrise /online
+Redirect 301 /213sunrise /online
+Redirect 301 /231sunrise /online
+Redirect 301 /312sunrise /online
+Redirect 301 /321sunrise /online
+Redirect 301 /123sunset /online
+Redirect 301 /132sunset /online
+Redirect 301 /213sunset /online
+Redirect 301 /231sunset /online
+Redirect 301 /312sunset /online
+Redirect 301 /321sunset /online
+Redirect 301 /123eclipse /online
+Redirect 301 /132eclipse /online
+Redirect 301 /213eclipse /online
+Redirect 301 /231eclipse /online
+Redirect 301 /312eclipse /online
+Redirect 301 /321eclipse /online
+Redirect 301 /123moon /online
+Redirect 301 /132moon /online
+Redirect 301 /213moon /online
+Redirect 301 /231moon /online
+Redirect 301 /312moon /online
+Redirect 301 /321moon /online
+Redirect 301 /123rainbow /online
+Redirect 301 /132rainbow /online
+Redirect 301 /213rainbow /online
+Redirect 301 /231rainbow /online
+Redirect 301 /312rainbow /online
+Redirect 301 /321rainbow /online
+Redirect 301 /123rain /online
+Redirect 301 /132rain /online
+Redirect 301 /213rain /online
+Redirect 301 /231rain /online
+Redirect 301 /312rain /online
+Redirect 301 /321rain /online
+Redirect 301 /123plan /online
+Redirect 301 /132plan /online
+Redirect 301 /213plan /online
+Redirect 301 /231plan /online
+Redirect 301 /312plan /online
+Redirect 301 /321plan /online
+Redirect 301 /123play /online
+Redirect 301 /132play /online
+Redirect 301 /213play /online
+Redirect 301 /231play /online
+Redirect 301 /312play /online
+Redirect 301 /321play /online
+Redirect 301 /123chart /online
+Redirect 301 /132chart /online
+Redirect 301 /213chart /online
+Redirect 301 /231chart /online
+Redirect 301 /312chart /online
+Redirect 301 /321chart /online
+Redirect 301 /123children /online
+Redirect 301 /132children /online
+Redirect 301 /213children /online
+Redirect 301 /231children /online
+Redirect 301 /312children /online
+Redirect 301 /321children /online
+Redirect 301 /123stars /online
+Redirect 301 /132stars /online
+Redirect 301 /213stars /online
+Redirect 301 /231stars /online
+Redirect 301 /312stars /online
+Redirect 301 /321stars /online
+Redirect 301 /123path /online
+Redirect 301 /132path /online
+Redirect 301 /213path /online
+Redirect 301 /231path /online
+Redirect 301 /312path /online
+Redirect 301 /321path /online
+Redirect 301 /123secret /online
+Redirect 301 /132secret /online
+Redirect 301 /213secret /online
+Redirect 301 /231secret /online
+Redirect 301 /312secret /online
+Redirect 301 /321secret /online
+Redirect 301 /123treasure /online
+Redirect 301 /132treasure /online
+Redirect 301 /213treasure /online
+Redirect 301 /231treasure /online
+Redirect 301 /312treasure /online
+Redirect 301 /321treasure /online
+Redirect 301 /123melody /online
+Redirect 301 /132melody /online
+Redirect 301 /213melody /online
+Redirect 301 /231melody /online
+Redirect 301 /312melody /online
+Redirect 301 /321melody /online
+Redirect 301 /123magic /online
+Redirect 301 /132magic /online
+Redirect 301 /213magic /online
+Redirect 301 /231magic /online
+Redirect 301 /312magic /online
+Redirect 301 /321magic /online
+Redirect 301 /123spell /online
+Redirect 301 /132spell /online
+Redirect 301 /213spell /online
+Redirect 301 /231spell /online
+Redirect 301 /312spell /online
+Redirect 301 /321spell /online
+Redirect 301 /123light /online
+Redirect 301 /132light /online
+Redirect 301 /213light /online
+Redirect 301 /231light /online
+Redirect 301 /312light /online
+Redirect 301 /321light /online
+Redirect 301 /123morning /online
+Redirect 301 /132morning /online
+Redirect 301 /213morning /online
+Redirect 301 /231morning /online
+Redirect 301 /312morning /online
+Redirect 301 /321morning /online
+
+</IfModule>
