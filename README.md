@@ -7,7 +7,7 @@
 
 ## چطور؟
 
-neverssl.ir و notssl.ir هرگز از [SSL](http://neverssl.ir/ssl) (که به آن [TLS](http://neverssl.ir/tls) نیز گفته می شود) استفاده نخواهند کرد. بدون رمزگذاری ، بدون احراز هویت قوی ، بدون [HSTS](http://neverssl.ir/hsts)، بدون [HTTP / 2.0](http://neverssl.ir/http2) ، فقط [HTTP](http://neverssl.ir/http)رمزگذاری نشده قدیمی که برای همیشه در عصر تاریک امنیت اینترنت گیر کرده است.
+سایت های neverssl.ir و notssl.ir هرگز از [SSL](http://neverssl.ir/ssl) (که به آن [TLS](http://neverssl.ir/tls) نیز گفته می شود) استفاده نخواهند کرد. بدون رمزگذاری ، بدون احراز هویت قوی ، بدون [HSTS](http://neverssl.ir/hsts)، بدون [HTTP / 2.0](http://neverssl.ir/http2) ، فقط [HTTP](http://neverssl.ir/http)رمزگذاری نشده قدیمی که برای همیشه در عصر تاریک امنیت اینترنت گیر کرده است.
 
 ## چرا؟
 
