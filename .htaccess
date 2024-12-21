@@ -151,5 +151,3 @@ RewriteCond %{REQUEST_URI} ^/[1-9]{9}morning$ [NC]
 RewriteRule ^(.*)$ /online [R=301,L]
 
 </IfModule>
-
-</IfModule>
