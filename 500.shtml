@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html style="height:100%">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="Refresh" content="5; URL=/">
+<title>500 Internal Server Error
+</title></head>
+<body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
+<div style="height:auto; min-height:100%; ">     <div style="text-align: center; width:900px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
+<h1 style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">STOP</h1>
+<h2 style="margin-top:20px;font-size: 30px;">You are not allowed to access these resources.</h2>
+<p>It will take you to the HOME in a few seconds . . . . .</p>
+<p>_______________________________________________________________________________</p>
+<br>
+<br>
+Your IP : <!--#echo var="REMOTE_ADDR" --> <br>
+Request URL : <!--#echo var="REQUEST_URI" --> <br>
+Server Nmae : <!--#echo var="HTTP_HOST" --> <br>
+Browser : <!--#echo var="HTTP_USER_AGENT" --> <br>
+
+</div></div></body></html>

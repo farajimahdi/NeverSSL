@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /img/
+Sitemap: http://www.notssl.ir/sitemap1.xml
+Sitemap: http://www.neverssl.ir/sitemap2.xml
